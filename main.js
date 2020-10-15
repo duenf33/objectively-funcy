@@ -16,7 +16,11 @@ function getLastName(obj){
 }
 
 function getFullName(obj){
-  
+  const getFullName = {
+    firstName: obj.firstName,
+    lastName: obj.lastName,
+  }
+  return  obj.firstName + ' ' + obj.lastName;
 }
 
 
