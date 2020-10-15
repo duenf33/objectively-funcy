@@ -1,5 +1,23 @@
 // Your code here.
+function getFirstName(obj){
+  const getFirstName = {
+    firstName: obj.firstName,
+    lastName: obj.lastName,
+  }
+  return obj.firstName;
+}
 
+function getLastName(obj){
+  const getLastName = {
+    firstName: obj.firstName,
+    lastName: obj.lastName,
+  }
+  return obj.lastName;
+}
+
+function getFullName(obj){
+  
+}
 
 
 
