@@ -1,30 +1,47 @@
 // Your code here.
-function getFirstName(obj){
-  const getFirstName = {
-    firstName: obj.firstName,
-    lastName: obj.lastName,
-  }
-  return obj.firstName;
+const getFirstName = function(person){
+  return person.firstName;
 }
 
-function getLastName(obj){
-  const getLastName = {
-    firstName: obj.firstName,
-    lastName: obj.lastName,
-  }
-  return obj.lastName;
+const getLastName = function(person){
+  return person.lastName;
 }
 
-function getFullName(obj){
-  const getFullName = {
-    firstName: obj.firstName,
-    lastName: obj.lastName,
-  }
-  return  obj.firstName + ' ' + obj.lastName;
+const getFullName = function(person){
+  return person.firstName + ' ' + person.lastName;
 }
 
+const setFirstName = function(person, firstName){
+  return person.firstName = firstName
+}
 
+const setAge = function(person, age){
+  return person.age = age;
+}
 
+const giveBirthday = function(person){
+  if('age' in person){
+    person.age = person.age + 1;
+  } else {
+    person.age = 1;
+  }
+}
+
+const marry = function(person1, person2){
+  person1.married = true;
+  person2.married = true;
+
+  person1.spouseName = getFullName(person2);
+  person2.spouseName = getFullName(person1);
+}
+
+const divorce = function(person1, person2){
+  person1.married = false;
+  person2.married = false;
+
+  delete person1.spouseName
+  delete person2.spouseName
+}
 
 // Our code here. Don't touch!
 if (typeof getFirstName === 'undefined') {
